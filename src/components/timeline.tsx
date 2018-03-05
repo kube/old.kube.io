@@ -1,0 +1,104 @@
+
+      /*#######.
+     ########",#:
+   #########',##".
+  ##'##'## .##',##.
+   ## ## ## # ##",#.
+    ## ## ## ## ##'
+     ## ## ## :##
+      ## ## ##*/
+
+import React from 'react'
+import { style, classes } from 'typestyle'
+import { px, rgba, quote } from 'csx'
+
+import * as Palette from '../palette'
+
+import { ListStyleMixin } from '../styles'
+
+type TimelineItem = {
+  date: string | number
+  title: string
+  place?: string
+  subtitle: string
+  url?: string
+}
+
+type TimelineProps = {
+  timeline: TimelineItem[]
+  style?: React.CSSProperties
+  className?: string
+}
+
+const TimelineStyle = style(ListStyleMixin, {
+  $nest: {
+    li: {
+      clear: 'both',
+      display: 'block',
+      margin: 0,
+      padding: 0,
+      marginTop: px(13),
+      marginBottom: px(20),
+      $nest: {
+        '.date': {
+          float: 'left',
+          textAlign: 'right',
+          paddingTop: px(6),
+          marginRight: px(11),
+          width: px(79),
+          fontSize: px(16),
+          fontWeight: 400,
+          fontFamily: Palette.FONTS.TEXT,
+          color: rgba(0, 0, 0, 0.45).toString()
+        },
+        '.content': {
+          width: 'auto',
+          overflow: 'hidden',
+          $nest: {
+            '.title': {
+              fontSize: px(21),
+              fontWeight: 700,
+              fontFamily: Palette.FONTS.SANS
+            },
+            '.place': {
+              fontSize: px(18),
+              fontFamily: Palette.FONTS.TEXT,
+              $nest: {
+                '&::before': {
+                  content: quote(' ')
+                }
+              }
+            },
+            '.subtitle': {
+              display: 'block',
+              marginTop: px(2),
+              fontStyle: 'italic',
+              fontFamily: Palette.FONTS.SERIF,
+              fontSize: px(18)
+            }
+          }
+        }
+      }
+    }
+  }
+})
+
+export default (props: TimelineProps) => (
+  <ul
+    style={props.style}
+    className={classes(TimelineStyle, props.className)}
+  >
+    {props.timeline.map(line => (
+      <li>
+        <div className="date">{line.date}</div>
+        <div className="content">
+          <a href={line.url} target="_blank">
+            <span className="title">{line.title}</span>
+          </a>
+          {line.place && <span className="place">{line.place}</span>}
+          <span className="subtitle">{line.subtitle}</span>
+        </div>
+      </li>
+    ))}
+  </ul>
+)
