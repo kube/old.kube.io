@@ -9,7 +9,7 @@
       ## ## ##*/
 
 import React from 'react'
-import { style, classes } from 'typestyle'
+import { style, classes, media } from 'typestyle'
 import { px, rgba, quote } from 'csx'
 
 import * as Palette from '../palette'
@@ -30,58 +30,72 @@ type TimelineProps = {
   className?: string
 }
 
-const TimelineStyle = style(ListStyleMixin, {
-  $nest: {
-    li: {
-      clear: 'both',
-      display: 'block',
-      margin: 0,
-      padding: 0,
-      marginTop: px(13),
-      marginBottom: px(20),
-      $nest: {
-        '.date': {
-          float: 'left',
-          textAlign: 'right',
-          paddingTop: px(6),
-          marginRight: px(11),
-          width: px(79),
-          fontSize: px(16),
-          fontWeight: 400,
-          fontFamily: Palette.FONTS.TEXT,
-          color: rgba(0, 0, 0, 0.45).toString()
-        },
-        '.content': {
-          width: 'auto',
-          overflow: 'hidden',
-          $nest: {
-            '.title': {
-              fontSize: px(21),
-              fontWeight: 700,
-              fontFamily: Palette.FONTS.SANS
-            },
-            '.place': {
-              fontSize: px(18),
-              fontFamily: Palette.FONTS.TEXT,
-              $nest: {
-                '&::before': {
-                  content: quote(' ')
+const TimelineStyle = style(
+  ListStyleMixin,
+  {
+    $nest: {
+      li: {
+        clear: 'both',
+        display: 'block',
+        margin: 0,
+        padding: 0,
+        marginTop: px(13),
+        marginBottom: px(20),
+        $nest: {
+          '.date': {
+            float: 'left',
+            textAlign: 'right',
+            paddingTop: px(6),
+            marginRight: px(11),
+            width: px(79),
+            fontSize: px(16),
+            fontWeight: 400,
+            fontFamily: Palette.FONTS.TEXT,
+            color: rgba(0, 0, 0, 0.45).toString()
+          },
+          '.content': {
+            width: 'auto',
+            overflow: 'hidden',
+            $nest: {
+              '.title': {
+                fontSize: px(21),
+                fontWeight: 700,
+                fontFamily: Palette.FONTS.SANS
+              },
+              '.place': {
+                fontSize: px(18),
+                fontFamily: Palette.FONTS.TEXT,
+                $nest: {
+                  '&::before': {
+                    content: quote(' ')
+                  }
                 }
+              },
+              '.subtitle': {
+                display: 'block',
+                marginTop: px(2),
+                fontStyle: 'italic',
+                fontFamily: Palette.FONTS.SERIF,
+                fontSize: px(18)
               }
-            },
-            '.subtitle': {
-              display: 'block',
-              marginTop: px(2),
-              fontStyle: 'italic',
-              fontFamily: Palette.FONTS.SERIF,
-              fontSize: px(18)
             }
           }
         }
       }
     }
-  }
-})
+  },
+  media(
+    { type: 'print' },
+    {
+      $nest: {
+        li: {
+          marginTop: px(7),
+          marginBottom: 0
+        }
+      }
+    }
+  )
+)
 
 export default (props: TimelineProps) => (
   <ul

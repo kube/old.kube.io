@@ -10,30 +10,38 @@
 
 import React from 'react'
 import { withRouter, RouteComponentProps } from 'react-router-dom'
-import { style, classes } from 'typestyle'
+import { style, classes, media } from 'typestyle'
 import { percent, rgba } from 'csx'
 
 import * as Palette from '../palette'
 
-const BackgroundPatternStyle = style({
-  zIndex: -42,
-  position: 'fixed',
-  top: 0,
-  bottom: 0,
-  left: 0,
-  right: 0,
-  width: percent(100),
-  height: percent(100),
-  transitionDuration: '0.4s',
-  backgroundColor: Palette.LIGHT_GREY,
-  fill: rgba(255, 255, 255, 0.42).toString(),
-  $nest: {
-    '&.dark': {
-      backgroundColor: Palette.DARK_GREY,
-      fill: rgba(0, 0, 0, 0.31).toString()
+const BackgroundPatternStyle = style(
+  {
+    zIndex: -42,
+    position: 'fixed',
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    width: percent(100),
+    height: percent(100),
+    transitionDuration: '0.4s',
+    backgroundColor: Palette.LIGHT_GREY,
+    fill: rgba(255, 255, 255, 0.42).toString(),
+    $nest: {
+      '&.dark': {
+        backgroundColor: Palette.DARK_GREY,
+        fill: rgba(0, 0, 0, 0.31).toString()
+      }
     }
-  }
-})
+  },
+  media(
+    { type: 'print' },
+    {
+      display: 'none'
+    }
+  )
+)
 
 const BackgroundPattern = ({
   location

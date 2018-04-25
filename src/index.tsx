@@ -12,7 +12,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import { BrowserRouter, Route } from 'react-router-dom'
 
-import { style, cssRule } from 'typestyle'
+import { style, cssRule, media } from 'typestyle'
 import { px } from 'csx'
 
 import Header from './components/header'
@@ -27,13 +27,22 @@ import { BodyStyle, DefaultLinkStyle } from './styles'
 cssRule('body', BodyStyle)
 cssRule('a', DefaultLinkStyle)
 
-const PageStyle = style({
-  position: 'relative',
-  width: px(490),
-  minHeight: px(600),
-  margin: '0 auto',
-  marginBottom: px(90)
-})
+const PageStyle = style(
+  {
+    position: 'relative',
+    width: px(490),
+    minHeight: px(600),
+    margin: '0 auto',
+    marginBottom: px(90)
+  },
+  media(
+    { type: 'print' },
+    {
+      width: 'auto',
+      marginBottom: 0
+    }
+  )
+)
 
 render(
   <BrowserRouter>
