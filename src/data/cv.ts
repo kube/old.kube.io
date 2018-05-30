@@ -1,5 +1,4 @@
-
-      /*#######.
+/*#######.
      ########",#:
    #########',##".
   ##'##'## .##',##.
@@ -46,10 +45,6 @@ export const cv = {
     {
       platform: 'StackOverflow',
       link: 'stackoverflow.com/users/1914206/kube'
-    },
-    {
-      platform: 'LinkedIn',
-      link: 'linkedin.com/in/cfeijoo/'
     },
     {
       platform: 'Twitter',
