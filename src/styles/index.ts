@@ -18,7 +18,7 @@ export const BodyStyle: types.NestedCSSProperties = {
   marginTop: px(110),
   fontFamily: Palette.FONTS.TEXT,
   color: Palette.DARK_GREY,
-  backgroundColor: Palette.DARK_GREY,
+  backgroundColor: Palette.LIGHT_GREY,
 
   // Remove margins on print
   ...media(

@@ -9,6 +9,7 @@
       ## ## ##*/
 
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import { style } from 'typestyle'
 import { px } from 'csx'
 import * as Palette from '../palette'
@@ -40,11 +41,22 @@ const ProjectsPageStyle = style({
 })
 
 export default () => (
-  <div className={ProjectsPageStyle}>
-    <section>
-      <h1>Projects.</h1>
-      <h2>Some Code Stuff.</h2>
-      {PROJECTS.map(project => <Project project={project} />)}
-    </section>
-  </div>
+  <>
+    <Helmet>
+      <style type="text/css">
+        {`
+          body {
+            background-color: ${Palette.DARK_GREY};
+          }
+        `}
+      </style>
+    </Helmet>
+    <div className={ProjectsPageStyle}>
+      <section>
+        <h1>Projects.</h1>
+        <h2>Some Code Stuff.</h2>
+        {PROJECTS.map(project => <Project project={project} />)}
+      </section>
+    </div>
+  </>
 )
