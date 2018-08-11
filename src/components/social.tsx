@@ -1,4 +1,5 @@
-/*#######.
+
+      /*#######.
      ########",#:
    #########',##".
   ##'##'## .##',##.
@@ -51,6 +52,11 @@ export default () => (
       link="https://github.com/kube"
       icon={Icons.GitHub}
       color={Palette.GITHUB}
+    />
+    <SocialLink
+      link="https://linkedin.com/in/cfeijoo"
+      icon={Icons.LinkedIn}
+      color={Palette.LINKEDIN}
     />
     <SocialLink
       link="https://stackoverflow.com/users/1914206/kube?tab=profile"

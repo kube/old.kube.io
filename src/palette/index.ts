@@ -1,4 +1,5 @@
-/*#######.
+
+      /*#######.
      ########",#:
    #########',##".
   ##'##'## .##',##.
@@ -15,6 +16,7 @@ export const DARK_GREY = '#111113'
 export const BLACK = '#000000'
 
 export const GITHUB = '#6e5494'
+export const LINKEDIN = '#0077B5'
 export const STACKOVERFLOW = '#FF9900'
 export const TWITTER = '#00ACED'
 
