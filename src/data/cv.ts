@@ -1,4 +1,5 @@
-/*#######.
+
+      /*#######.
      ########",#:
    #########',##".
   ##'##'## .##',##.
@@ -34,7 +35,7 @@ export const cv = {
 
   languages: ['TypeScript', 'JavaScript', 'C', 'Ruby', 'Haskell'],
   frameworks: ['React', 'Redux', 'Electron', 'NodeJS', 'Webpack'],
-  tools: ['VS Code', 'Sketch', 'Photoshop', 'Keynote'],
+  tools: ['VS Code', 'Sketch', 'Framer X', 'Photoshop', 'Keynote'],
   hobbies: ['Guitar', 'Running', 'Graphic Design'],
 
   social: [
