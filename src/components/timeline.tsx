@@ -13,6 +13,7 @@ import { style, classes, media } from 'typestyle'
 import { px, rgba, quote } from 'csx'
 
 import * as Palette from '../palette'
+import Markdown from 'react-markdown'
 
 import { ListStyleMixin } from '../styles'
 
@@ -22,6 +23,8 @@ type TimelineItem = {
   place?: string
   subtitle: string
   url?: string
+  description?: string
+  stack?: string[]
 }
 
 type TimelineProps = {
@@ -40,7 +43,7 @@ const TimelineStyle = style(
         margin: 0,
         padding: 0,
         marginTop: px(13),
-        marginBottom: px(20),
+        marginBottom: px(31),
         $nest: {
           '.date': {
             float: 'left',
@@ -77,6 +80,31 @@ const TimelineStyle = style(
                 fontStyle: 'italic',
                 fontFamily: Palette.FONTS.SERIF,
                 fontSize: px(18)
+              },
+              '.description': {
+                fontSize: px(14),
+                color: '#676767',
+                $nest: {
+                  p: {
+                    margin: '7px 0'
+                  }
+                }
+              },
+              '.stack-list': {
+                padding: 0,
+                margin: 0,
+                $nest: {
+                  li: {
+                    border: '1px solid #CCCCCC',
+                    color: '#797979',
+                    borderRadius: px(3),
+                    fontSize: px(9),
+                    display: 'inline-block',
+                    margin: px(2),
+                    padding: '2px 3px',
+                    textTransform: 'uppercase'
+                  }
+                }
               }
             }
           }
@@ -89,8 +117,9 @@ const TimelineStyle = style(
     {
       $nest: {
         li: {
-          marginTop: px(7),
-          marginBottom: 0
+          pageBreakInside: 'avoid',
+          marginTop: px(13),
+          marginBottom: px(22)
         }
       }
     }
@@ -111,6 +140,20 @@ export default (props: TimelineProps) => (
           </a>
           {line.place && <span className="place">{line.place}</span>}
           <span className="subtitle">{line.subtitle}</span>
+
+          {line.description ? (
+            <div className="description">
+              <Markdown source={line.description} />
+            </div>
+          ) : null}
+
+          {line.stack ? (
+            <ul className="stack-list">
+              {line.stack.map(item => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          ) : null}
         </div>
       </li>
     ))}
