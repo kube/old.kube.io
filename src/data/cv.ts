@@ -8,6 +8,8 @@
      ## ## ## :##
       ## ## ##*/
 
+import { paddedText } from '../lib'
+
 export const cv = {
   firstName: 'Chris',
   lastName: 'Feijoo',
@@ -88,56 +90,143 @@ export const cv = {
 
   work: [
     {
+      date: 'Since April 2015',
+      title: 'kube.io',
+      subtitle: 'Freelance Sofware Engineer',
+      description: paddedText`
+      |Frontend & backend web/desktop JavaScript app development.`,
+      stack: [
+        'TypeScript',
+        'React',
+        'Redux',
+        'NodeJS',
+        'GraphQL',
+        'Electron',
+        'Framer X',
+        'Sketch'
+      ]
+    },
+    {
       date: 'Aug-Feb 2018',
       title: 'Teads',
       place: 'Montpellier',
       subtitle: 'Software Engineer – Format Team',
-      url: 'https://www.teads.tv'
+      url: 'https://www.teads.tv',
+      description: paddedText`
+      |Format Team develops the Ad Player.
+      |
+      |Worked on Video/Display Players, Trackings and A/B Tests.
+      |
+      |Prepared codebase migration to modular JavaScript using Webpack, and various TypeScript enhancements.`,
+      stack: [
+        'TypeScript',
+        'VAST',
+        'VPAID',
+        'Display',
+        'Tracking',
+        'Viewability',
+        'Webpack',
+        'A/B Testing',
+        'Scala',
+        'Spark',
+        'Jupyter Notebooks'
+      ]
     },
     {
       date: '2017',
       title: 'PandaNote',
       subtitle: 'Code/UI/UX',
-      url: 'https://github.com/Pandanote/Releases'
+      url: 'https://github.com/Pandanote/Releases',
+      description: paddedText`
+      |PandaNote was a minimalist desktop editor destinated to students to build synthesis note from their courses.
+      |
+      |It featured a Test mode permitting to test knowledge on a document.
+      `,
+      stack: ['TypeScript', 'React', 'Redux', 'Electron', 'DraftJS']
     },
     {
       date: '2017',
       title: '42',
       place: 'Paris',
       subtitle: 'JavaScript Piscine Author',
-      url: 'http://www.42.fr/'
+      url: 'http://www.42.fr/',
+      description: paddedText`
+      |Piscines are two-weeks intensive courses where 42 students discover new concepts/languages with videos and exercises.
+      |
+      |First week introduced all base concepts of JavaScript and TypeScript.
+      |The second week was about web/desktop app development using React/Redux/Electron.`,
+      stack: [
+        'JavaScript',
+        'TypeScript',
+        'NodeJS',
+        'CommonJS',
+        'ES Modules',
+        'Object-Oriented Programming',
+        'Functional Programming',
+        'Asynchronous/Event-Driven Programming',
+        'React',
+        'Redux',
+        'Electron',
+        'Webpack',
+        'Unit Testing',
+        'Jest'
+      ]
     },
     {
       date: 'Jan-May 2016',
       title: 'DotID',
       place: 'HEC Digital Entrepreneur, Paris',
-      subtitle: 'Co-founder — Mobile Authentication System'
-    },
-    {
-      date: 'Since April 2015',
-      title: 'kube.io',
-      subtitle: 'Freelance Developer'
+      subtitle: 'Co-founder',
+      description: paddedText`
+      |DotId was a project of a mobile password-less authentication system, we worked on with two other 42 students.
+      |
+      |Our goal was to provide the easiest and most secure way to connect anywhere.
+      |
+      |We participated to the 2nd edition of the HEC/42 Startup Launchpad, which helps students create their startup during a 2 months practice-based course.`,
+      stack: [
+        'Startup Creation',
+        'Marketing',
+        'Business Model',
+        'C',
+        'JavaScript',
+        'TypeScript',
+        'NodeJS',
+        'Swift',
+        'AES',
+        'RSA',
+        'PAM Modules'
+      ]
     },
     {
       date: 'Sept-Dec 2014',
       title: 'PopChef',
       place: 'Paris',
-      subtitle: 'Software Developer',
-      url: 'https://www.eatpopchef.com'
-    },
-    {
-      date: 'October 2012',
-      title: 'Office Center',
-      place: 'Aiglun',
-      subtitle: 'Technician',
-      url: 'https://www.officecenter.fr'
+      subtitle: 'Software Engineer Intern',
+      url: 'https://www.eatpopchef.com',
+      description: paddedText`
+      |We worked as two engineers with the then-CTO to build the entire frontend & backend of the Food-Delivery application.`,
+      stack: [
+        'JavaScript',
+        'AngularJS',
+        'NodeJS',
+        'SQL'
+      ]
     },
     {
       date: 'Summer 2008',
       title: 'XSalto',
       place: 'Digne',
       subtitle: 'Graphic Designer / Integrator',
-      url: 'http://www.xsalto.com/'
+      url: 'http://www.xsalto.com/',
+      description: paddedText`
+      |During Summer 2008, I had the opportunity to work as a Web Designer at XSalto.
+      |I worked on websites like Vallée de la Blanche, Tignes and Pra-Loup Ski Resorts.`,
+      stack: [
+        'Photoshop',
+        'Fireworks',
+        'HTML',
+        'CSS'
+      ]
     }
   ]
 }
