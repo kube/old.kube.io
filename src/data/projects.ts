@@ -35,14 +35,14 @@ export const PROJECTS: Project[] = [
     |[not able to infer type](https://github.com/facebook/immutable-js/issues/1462)
     |on sub-state-trees as it uses strings to define sub-tree to update:
     |
-    |\`\`\`
-    |state.set(['some', 'nested', 'property', 42])
+    |\`\`\`js
+    |state.set(['some', 'nested', 'property'], 42)
     |\`\`\`
     |
     |Monolite, on its side, uses accessor functions to get the target node
     |of the state tree to update:
-    |\`\`\`
-    |set(state, _ => _.some.nested.property)(42)
+    |\`\`\`js
+    |set(state, _ => _.some.nested.property, 42)
     |\`\`\`
     |
     |This allows TypeScript to do static analysis and
@@ -89,7 +89,7 @@ export const PROJECTS: Project[] = [
     |[error-prone and block-only](https://medium.com/chrisburgin/rewriting-javascript-replacing-the-switch-statement-cfff707cf045),
     |WhenSwitch enables simple function conditional flows, as expressions:
     |
-    |\`\`\`
+    |\`\`\`ts
     |const getDrinkPrice = drink =>
     |  when(drink)
     |    .is('Coke', 1.50)
@@ -98,7 +98,7 @@ export const PROJECTS: Project[] = [
     |\`\`\`
     |
     |This is useful for conditional components in React for example:
-    |\`\`\`
+    |\`\`\`jsx
     |<div>
     |  {
     |    when(props.page)
@@ -141,7 +141,7 @@ export const PROJECTS: Project[] = [
     |
     |It permits to define easily which actions will be dispatched globally,
     |by configuring the middleware:
-    |\`\`\`
+    |\`\`\`js
     |applyMiddleware(
     |  createGlobalDispatchMiddleware(action =>
     |    action.type === 'INCREMENT'
@@ -151,7 +151,7 @@ export const PROJECTS: Project[] = [
     |
     |Or if using the default already-specialized middleware, just
     |define actions with a \`global\` property set to \`true\`:
-    |\`\`\`
+    |\`\`\`js
     |const globalIncrement = x => ({
     |  global: true,
     |  type: 'INCREMENT',
@@ -170,18 +170,18 @@ export const PROJECTS: Project[] = [
     |**React Electron** provides a simple driver for BrowserWindow
     |declaration in Electron, using React.
     |
-    |\`\`\`
+    |\`\`\`jsx
     |render(
     |  <App>
     |    {
     |      state.notes.map(note =>
     |        <BrowserWindow
     |          key={note.id}
-    |          url='https://github.com'
+    |          url={NOTE_RENDERER_PATH}
     |          height={640}
     |          width={480}
     |          onClose={() => store.dispatch(
-    |            closeNote(note.id)
+    |            closeNoteRequest(note.id)
     |          )}
     |        />
     |      )
