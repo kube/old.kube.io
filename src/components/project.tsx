@@ -16,6 +16,7 @@ import { px, percent, rgba } from 'csx'
 
 import * as Palette from '../palette'
 import * as Icons from './icons'
+import { CodeRenderer } from './CodeRenderer'
 
 type Props = {
   project: Project
@@ -51,15 +52,15 @@ const ProjectItemStyle = style({
       borderBottom: `1px dotted rgba(255, 255, 255, 0.3)`
     },
     pre: {
-      padding: '11px 13px',
-      backgroundColor: rgba(0, 0, 0, 0.2).toString(),
+      padding: '13px 18px',
+      backgroundColor: rgba(0, 0, 0, 0.5).toString(),
       border: '1px solid rgba(255, 255, 255, 0.2)',
-      borderRadius: px(3)
+      borderBottomWidth: px(2),
+      borderRadius: px(4)
     },
     code: {
       fontSize: px(15),
-      fontWeight: 300,
-      color: Palette.LightCode,
+      fontWeight: 400,
       fontFamily: Palette.FONTS.CODE
     },
     a: {
@@ -104,7 +105,12 @@ export default ({ project }: Props) => (
     )}
 
     <div>
-      <Markdown source={project.text} />
+      <Markdown
+        source={project.text}
+        renderers={{
+          code: CodeRenderer
+        }}
+      />
     </div>
 
     {project.github && (
