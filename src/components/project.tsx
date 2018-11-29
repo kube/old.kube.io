@@ -23,15 +23,18 @@ type Props = {
 
 const ProjectItemStyle = style({
   margin: 0,
-  marginBottom: px(85),
+  marginBottom: px(94),
   textAlign: 'justify',
-  fontWeight: 300,
-  fontSize: px(17),
-  lineHeight: px(20),
+  fontWeight: 400,
+  fontSize: px(16),
+  lineHeight: px(21),
 
   $nest: {
     strong: {
       fontWeight: 500
+    },
+    p: {
+      marginBottom: px(20)
     },
     h3: {
       fontFamily: Palette.FONTS.SANS,
