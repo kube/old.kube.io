@@ -59,5 +59,5 @@ render(
       </div>
     </div>
   </BrowserRouter>,
-  document.body
+  document.getElementById('app-root')
 )
