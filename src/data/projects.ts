@@ -139,7 +139,7 @@ export const PROJECTS: Project[] = [
     |This library provides a simple way to have **Redux actions globally dispatched**
     |through all processes of an Electron application, thanks to a middleware.
     |
-    |It permits to define easily what actions will be dispatched globally,
+    |It permits to define easily which actions will be dispatched globally,
     |by configuring the middleware:
     |\`\`\`
     |applyMiddleware(
