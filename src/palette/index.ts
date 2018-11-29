@@ -35,7 +35,8 @@ export const DarkLink = {
 
 export const FONTS = {
   SANS: 'Montserrat, Helvetica, Arial, sans-serif',
-  TEXT: 'Roboto, Helvetica, Arial, sans-serif',
+  TEXT: 'Inter UI, Roboto, Helvetica, Arial, sans-serif',
   SERIF: '"Libre Baskerville", Times, "Times New Roman", serif',
-  CODE: '"Source Code Pro", monospace'
+  CODE: 'Hasklig, SF Mono, "Source Code Pro", monospace'
+}
 }
