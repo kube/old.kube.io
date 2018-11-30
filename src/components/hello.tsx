@@ -15,21 +15,22 @@ import Markdown from 'react-markdown'
 
 import Social from './social'
 import { intro } from '../data/intro'
+import * as PALETTE from '../palette'
 
 const HelloPageStyle = style({
   margin: '0 auto',
   $nest: {
     h1: {
-      fontFamily: 'Montserrat, Helvetica, Arial, sans-serif',
-      fontWeight: 'bolder',
+      fontFamily: PALETTE.FONTS.SANS,
+      fontWeight: 700,
       fontSize: px(74),
       margin: 0,
       padding: 0,
       marginTop: px(16)
     },
     h2: {
-      fontFamily: 'Montserrat, Helvetica, Arial, sans-serif',
-      fontWeight: 'normal',
+      fontFamily: PALETTE.FONTS.SANS,
+      fontWeight: 400,
       fontSize: px(40),
       margin: 0,
       padding: 0,
@@ -37,7 +38,6 @@ const HelloPageStyle = style({
     },
     p: {
       textAlign: 'justify',
-      fontWeight: 300,
       fontSize: px(18),
       lineHeight: px(25)
     }

@@ -12,10 +12,11 @@ import React from 'react'
 import { style, media } from 'typestyle'
 import { px, percent, quote } from 'csx'
 
+import * as PALETTE from '../palette'
+
 import { cv } from '../data/cv'
 import List from './list'
 import Timeline from './timeline'
-import * as Palette from '../palette'
 
 const CvPageStyle = style(
   {
@@ -23,8 +24,8 @@ const CvPageStyle = style(
     marginBottom: px(130),
     $nest: {
       h1: {
-        fontFamily: 'Montserrat, Helvetica, Arial, sans-serif',
-        fontWeight: 'bolder',
+        fontFamily: PALETTE.FONTS.SANS,
+        fontWeight: 700,
         fontSize: px(74),
         margin: 0,
         padding: 0,
@@ -34,8 +35,7 @@ const CvPageStyle = style(
       },
       h3: {
         fontSize: px(25),
-        fontWeight: 200,
-        fontFamily: Palette.FONTS.SANS,
+        fontFamily: PALETTE.FONTS.SANS,
         textTransform: 'uppercase',
         marginTop: px(54),
         marginBottom: px(13)
@@ -61,13 +61,13 @@ const IntroStyle = style(
     marginTop: px(36),
     $nest: {
       h2: {
-        fontFamily: Palette.FONTS.SANS,
+        fontFamily: PALETTE.FONTS.SANS,
         fontSize: px(34),
         margin: 0,
         padding: 0
       },
       '.job': {
-        fontFamily: Palette.FONTS.SANS,
+        fontFamily: PALETTE.FONTS.SANS,
         fontSize: px(24),
         margin: 0,
         padding: 0

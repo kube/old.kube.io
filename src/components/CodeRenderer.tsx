@@ -35,14 +35,14 @@ const CodeStyle = style({
       color: PALETTE.CODE.PINK
     },
     '.operator': {
-      fontWeight: 600,
+      fontWeight: 500,
       color: PALETTE.CODE.PURPLE
     },
     '.keyword': {
       color: PALETTE.CODE.PURPLE
     },
     '.function': {
-      fontWeight: 600,
+      fontWeight: 500,
       color: PALETTE.CODE.PINK
     },
     '.number': {
@@ -62,7 +62,7 @@ const CodeStyle = style({
       }
     },
     '.boolean': {
-      fontWeight: 600,
+      fontWeight: 500,
       color: PALETTE.CODE.CYAN
     }
   }

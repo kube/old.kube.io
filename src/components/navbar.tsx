@@ -13,7 +13,7 @@ import { NavLink } from 'react-router-dom'
 import { style, media } from 'typestyle'
 import { px, rotate } from 'csx'
 
-import * as Palette from '../palette'
+import * as PALETTE from '../palette'
 
 const NavStyle = style(
   {
@@ -27,15 +27,15 @@ const NavStyle = style(
       a: {
         textDecoration: 'none',
         opacity: 0.6,
-        color: Palette.MEDIUM_GREY,
+        color: PALETTE.MEDIUM_GREY,
         $nest: {
           '&.active': {
             opacity: 1.0,
-            color: Palette.PURPLE
+            color: PALETTE.PURPLE
           },
           '&:hover': {
             opacity: 1.0,
-            color: Palette.MEDIUM_GREY
+            color: PALETTE.MEDIUM_GREY
           }
         }
       },
@@ -47,7 +47,7 @@ const NavStyle = style(
           li: {
             fontSize: px(22),
             fontWeight: 700,
-            fontFamily: 'Montserrat, Helvetica, Arial, sans-serif',
+            fontFamily: PALETTE.FONTS.SANS,
             textTransform: 'uppercase',
             display: 'inline-block',
             margin: 0,

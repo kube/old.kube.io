@@ -12,17 +12,17 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { style } from 'typestyle'
 import { px } from 'csx'
-import * as Palette from '../palette'
 import Project from './project'
 
+import * as PALETTE from '../palette'
 import { PROJECTS } from '../data/projects'
 
 const ProjectsPageStyle = style({
   margin: '0 auto',
-  color: Palette.SUNBURST_GREY,
+  color: PALETTE.SUNBURST_GREY,
   $nest: {
     h1: {
-      fontFamily: 'Montserrat, Helvetica, Arial, sans-serif',
+      fontFamily: PALETTE.FONTS.SANS,
       fontWeight: 'bolder',
       fontSize: px(74),
       margin: 0,
@@ -30,7 +30,7 @@ const ProjectsPageStyle = style({
       marginTop: px(16)
     },
     h2: {
-      fontFamily: 'Montserrat, Helvetica, Arial, sans-serif',
+      fontFamily: PALETTE.FONTS.SANS,
       fontWeight: 'normal',
       fontSize: px(40),
       margin: 0,
@@ -46,7 +46,7 @@ export default () => (
       <style type="text/css">
         {`
           body {
-            background-color: ${Palette.DARK_GREY};
+            background-color: ${PALETTE.DARK_GREY};
           }
         `}
       </style>

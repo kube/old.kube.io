@@ -8,6 +8,13 @@
      ## ## ## :##
       ## ## ##*/
 
+import {
+  Hasklig,
+  InterUI,
+  Montserrat,
+  LibreBaskerville
+} from '../fonts'
+
 export const PURPLE = '#7160B7'
 export const LIGHT_GREY = '#F1F1F0'
 export const SUNBURST_GREY = '#CFCFCC'
@@ -33,10 +40,10 @@ export const DarkLink = {
 }
 
 export const FONTS = {
-  SANS: 'Montserrat, Helvetica, Arial, sans-serif',
-  TEXT: 'Inter UI, Roboto, Helvetica, Arial, sans-serif',
-  SERIF: '"Libre Baskerville", Times, "Times New Roman", serif',
-  CODE: 'Hasklig, SF Mono, "Source Code Pro", monospace'
+  SANS: Montserrat,
+  TEXT: InterUI,
+  SERIF: LibreBaskerville,
+  CODE: Hasklig
 }
 
 export const CODE = {
