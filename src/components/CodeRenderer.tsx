@@ -12,9 +12,7 @@ import React from 'react'
 import { style } from 'typestyle'
 
 import { highlight, languages } from 'prismjs'
-import 'prismjs/components/prism-typescript'
 import 'prismjs/components/prism-jsx'
-import 'prismjs/components/prism-tsx'
 
 import * as PALETTE from '../palette'
 

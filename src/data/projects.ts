@@ -89,7 +89,7 @@ export const PROJECTS: Project[] = [
     |[error-prone and block-only](https://medium.com/chrisburgin/rewriting-javascript-replacing-the-switch-statement-cfff707cf045),
     |WhenSwitch enables simple function conditional flows, as expressions:
     |
-    |\`\`\`ts
+    |\`\`\`js
     |const getDrinkPrice = drink =>
     |  when(drink)
     |    .is('Coke', 1.50)
