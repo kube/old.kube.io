@@ -12,7 +12,7 @@ export const Montserrat = loadFont({
   name: 'Montserrat',
   styles: ['normal'],
   extension: 'ttf',
-  weights: [400, 500, 600, 700]
+  weights: [300, 400, 500, 600, 700]
 })
 
 export const InterUI = loadFont({

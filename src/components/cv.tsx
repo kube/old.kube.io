@@ -35,6 +35,7 @@ const CvPageStyle = style(
       },
       h3: {
         fontSize: px(25),
+        fontWeight: 300,
         fontFamily: PALETTE.FONTS.SANS,
         textTransform: 'uppercase',
         marginTop: px(54),
