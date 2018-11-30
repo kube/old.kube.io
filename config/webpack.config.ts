@@ -31,7 +31,7 @@ const config: Configuration = {
         loader: 'ts-loader'
       },
       {
-        test: /\.svg$/,
+        test: /\.(o|t)tf$/,
         loader: 'file-loader'
       }
     ]
