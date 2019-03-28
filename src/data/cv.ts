@@ -35,7 +35,7 @@ export const cv = {
   },
   phone: '0625970771',
 
-  languages: ['TypeScript', 'JavaScript', 'C', 'Ruby', 'Haskell'],
+  languages: ['TypeScript', 'JavaScript', 'C', 'Ruby', 'Rust'],
   frameworks: ['React', 'Redux', 'Electron', 'NodeJS', 'Webpack'],
   tools: ['VS Code', 'Sketch', 'Framer X', 'Photoshop', 'Keynote'],
   hobbies: ['Guitar', 'Running', 'Graphic Design'],
@@ -104,6 +104,42 @@ export const cv = {
         'Electron',
         'Framer X',
         'Sketch'
+      ]
+    },
+    {
+      date: 'Dec-Feb 2019',
+      title: 'Iziwork',
+      place: 'Paris',
+      subtitle: 'Backend Software Engineer',
+      url: 'https://www.iziwork.com',
+      description: paddedText`
+      |Automation of Timesheets Upload and Extraction for Billing and Payments.
+      |
+      |Automation of CV Parsing Data Extraction, for matching workers with companies.
+      |
+      |Setup Unit/E2E Testing environment, and various refactorings.`,
+      stack: [
+        'Flowtype',
+        'Node.JS',
+        'MongoDB',
+        'Parse',
+        'Jest'
+      ]
+    },
+    {
+      date: 'September 2018',
+      title: 'Bazimo',
+      place: 'Montpellier',
+      subtitle: 'Frontend Software Engineer',
+      url: 'https://www.bazimo.fr',
+      description: paddedText`
+      |Development of new Document Explorer Panel, which centralizes upload and view of all kind of documents in a single view.
+      |
+      |Setup TypeScript, Build Process Improvements.`,
+      stack: [
+        'AngularJS',
+        'TypeScript',
+        'REST'
       ]
     },
     {
