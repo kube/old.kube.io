@@ -107,6 +107,31 @@ export const cv = {
       ]
     },
     {
+      date: 'Apr-Aug 2019',
+      title: 'Contentsquare',
+      place: 'Paris',
+      subtitle: 'Software Engineer',
+      url: 'https://www.contentsquare.com',
+      description: paddedText`
+      |Worked in U2 Team, in charge of transversal projects (Authentication, Backoffice, Public API, Integrations).
+      |
+      |Worked on new Public API: Authentication, Quota Limiter, Throttling (Concurrent Calls and Rate Limiter).
+      |
+      |Worked on Login Application, allowing internal and external services to connect using Contentsquare account.
+      |
+      |Decentralization of authentication using JWKS.
+      |`,
+      stack: [
+        'TypeScript',
+        'Node.JS',
+        'NestJS',
+        'Vue',
+        'Angular',
+        'PostgreSQL',
+        'SAML',
+      ]
+    },
+    {
       date: 'Dec-Feb 2019',
       title: 'Iziwork',
       place: 'Paris',
