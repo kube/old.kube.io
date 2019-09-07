@@ -61,7 +61,7 @@ export function loadFont(font: Font) {
 
       fontFace({
         fontFamily: font.name,
-        fontWeight: fontWeight as number,
+        fontWeight: fontWeight,
         fontStyle,
         src: url(
           require(`./${font.name}/${font.name}-${suffix}.${

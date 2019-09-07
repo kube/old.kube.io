@@ -2,8 +2,8 @@
   "name": "kubedotio",
   "version": "1.0.0",
   "scripts": {
-    "dev": "webpack-dev-server --config config/webpack.dev.ts",
-    "build": "webpack --config config/webpack.prod.ts",
+    "dev": "webpack-dev-server",
+    "build": "webpack",
     "deploy": "gh-pages -d dist -b master"
   },
   "devDependencies": {

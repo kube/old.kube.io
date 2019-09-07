@@ -76,7 +76,7 @@ export const CodeRenderer = (props: CodeRenderProps) => (
   <pre className={CodeStyle}>
     <code
       dangerouslySetInnerHTML={{
-        __html: highlight(props.value, languages[props.language])
+        __html: highlight(props.value, languages[props.language], 'typescript')
       }}
     />
   </pre>

@@ -8,20 +8,26 @@
      ## ## ## :##
       ## ## ##*/
 
-import { join } from 'path'
-import { Configuration } from 'webpack'
-import HtmlPlugin = require('html-webpack-plugin')
-import CopyPlugin = require('copy-webpack-plugin')
+const { join } = require('path')
+const HtmlPlugin = require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
-const PROJECT_ROOT = join(__dirname, '..')
+const PROJECT_ROOT = __dirname
 const SOURCE_ROOT = join(PROJECT_ROOT, 'src')
 const BUILD_FOLDER = join(PROJECT_ROOT, 'dist')
 
-const config: Configuration = {
+/**
+ * @type import('webpack').Configuration
+ */
+module.exports = {
   entry: SOURCE_ROOT,
 
   output: {
     path: BUILD_FOLDER
+  },
+
+  devServer: {
+    historyApiFallback: true
   },
 
   module: {
@@ -64,5 +70,3 @@ const config: Configuration = {
     extensions: ['.ts', '.tsx', '.js']
   }
 }
-
-export default config
