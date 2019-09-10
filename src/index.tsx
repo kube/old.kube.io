@@ -20,7 +20,6 @@ import NavBar from './components/navbar'
 import HelloPage from './components/hello'
 import ProjectsPage from './components/projects'
 import CvPage from './components/cv'
-import Background from './components/background'
 
 import { BodyStyle, DefaultLinkStyle } from './styles'
 
@@ -46,16 +45,13 @@ const PageStyle = style(
 
 render(
   <BrowserRouter>
-    <div>
-      <Background />
-      <div className={PageStyle}>
-        <Header />
-        <NavBar />
-        <div>
-          <Route exact path="/" component={HelloPage} />
-          <Route path="/projects" component={ProjectsPage} />
-          <Route path="/cv" component={CvPage} />
-        </div>
+    <div className={PageStyle}>
+      <Header />
+      <NavBar />
+      <div>
+        <Route exact path="/" component={HelloPage} />
+        <Route path="/projects" component={ProjectsPage} />
+        <Route path="/cv" component={CvPage} />
       </div>
     </div>
   </BrowserRouter>,
