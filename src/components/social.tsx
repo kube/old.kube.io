@@ -54,6 +54,11 @@ export default () => (
       color={Palette.GITHUB}
     />
     <SocialLink
+      link="https://observablehq.com/@kube"
+      icon={Icons.Observable}
+      color={Palette.OBSERVABLE}
+    />
+    <SocialLink
       link="https://linkedin.com/in/cfeijoo"
       icon={Icons.LinkedIn}
       color={Palette.LINKEDIN}
