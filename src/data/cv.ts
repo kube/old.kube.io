@@ -92,7 +92,7 @@ export const cv = {
     {
       date: 'Since April 2015',
       title: 'kube.io',
-      subtitle: 'Freelance Sofware Engineer',
+      subtitle: 'Freelance Software Engineer',
       description: paddedText`
       |Frontend & backend web/desktop JavaScript app development.`,
       stack: [
@@ -209,7 +209,7 @@ export const cv = {
       date: '2017',
       title: '42',
       place: 'Paris',
-      subtitle: 'JavaScript Piscine Author',
+      subtitle: 'JavaScript Bootcamp Author',
       url: 'http://www.42.fr/',
       description: paddedText`
       |Piscines are two-weeks intensive courses where 42 students discover new concepts/languages with videos and exercises.
@@ -286,7 +286,8 @@ export const cv = {
         'Photoshop',
         'Fireworks',
         'HTML',
-        'CSS'
+        'CSS',
+        'Flash'
       ]
     }
   ]
