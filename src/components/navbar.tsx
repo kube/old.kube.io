@@ -20,7 +20,7 @@ const NavStyle = style(
     position: 'fixed',
     display: 'inline-block',
     transform: rotate('90deg'),
-    transformOrigin: '0 50%',
+    transformOrigin: '0 51%',
     marginLeft: px(-61),
     marginTop: px(13),
     $nest: {
