@@ -26,7 +26,7 @@ const ProjectItemStyle = style({
   margin: 0,
   marginBottom: px(94),
   textAlign: 'justify',
-  fontWeight: 400,
+  fontWeight: 300,
   fontSize: px(16),
   lineHeight: px(21),
 
@@ -35,7 +35,7 @@ const ProjectItemStyle = style({
       fontWeight: 500
     },
     p: {
-      marginBottom: px(20)
+      marginBottom: px(16)
     },
     h3: {
       fontFamily: Palette.FONTS.SANS,
@@ -45,18 +45,17 @@ const ProjectItemStyle = style({
       margin: 0,
       padding: 0,
       marginTop: px(54),
-      paddingBottom: px(7),
-      marginBottom: px(13),
+      paddingBottom: px(22),
       opacity: 0.7,
-      color: Palette.SUNBURST_GREY,
-      borderBottom: `1px dotted rgba(255, 255, 255, 0.3)`
+      color: Palette.MOONBURST_GREY,
     },
     pre: {
       padding: '13px 18px',
-      backgroundColor: rgba(0, 0, 0, 0.5).toString(),
-      border: '1px solid rgba(255, 255, 255, 0.2)',
+      backgroundColor: rgba(255, 255, 255, 0.04).toString(),
+      backdropFilter: `blur(3px)`,
+      '-webkit-backdrop-filter': 'blur(3px)',
       borderBottomWidth: px(2),
-      borderRadius: px(4)
+      borderRadius: px(7)
     },
     code: {
       fontSize: px(15),
@@ -81,7 +80,6 @@ const YoutubeFrameStyle = style({
   width: percent(100),
   height: px(310),
   border: `2px solid ${Palette.DARK_GREY}`,
-  boxShadow: '0 4px 25px black'
 })
 
 export default ({ project }: Props) => (
@@ -116,7 +114,7 @@ export default ({ project }: Props) => (
     {project.github && (
       <a href={project.github} target="_blank">
         <Icons.GitHub
-          style={{ fill: Palette.SUNBURST_GREY, width: px(35) }}
+          style={{ fill: Palette.SUNBURST_GREY, width: px(31) }}
         />
       </a>
     )}

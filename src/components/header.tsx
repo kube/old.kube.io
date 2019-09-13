@@ -13,7 +13,7 @@ import { style, media } from 'typestyle'
 import { px } from 'csx'
 
 import * as Palette from '../palette'
-import * as Icons from './icons'
+import { Logo } from './logo/kubeLogo'
 
 const LogoStyle = style(
   media(
@@ -33,6 +33,6 @@ const LogoStyle = style(
 
 export default () => (
   <header>
-    <Icons.Kube className={LogoStyle} />
+    <Logo className={LogoStyle} />
   </header>
 )

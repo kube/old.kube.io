@@ -11,6 +11,7 @@
 const { join } = require('path')
 const HtmlPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
+const FaviconsPlugin = require('favicons-webpack-plugin')
 
 const PROJECT_ROOT = __dirname
 const SOURCE_ROOT = join(PROJECT_ROOT, 'src')
@@ -47,12 +48,8 @@ module.exports = {
     new HtmlPlugin({
       template: join(SOURCE_ROOT, 'index.html')
     }),
+    new FaviconsPlugin(join(SOURCE_ROOT, 'images/favicon.png')),
     new CopyPlugin([
-      {
-        from: 'images/favicon*.*',
-        context: SOURCE_ROOT,
-        to: BUILD_FOLDER
-      },
       {
         from: 'CNAME',
         context: PROJECT_ROOT,

@@ -16,6 +16,7 @@ import Project from './project'
 
 import * as PALETTE from '../palette'
 import { PROJECTS } from '../data/projects'
+import { buildBackgroundSvgString } from '../styles'
 
 const ProjectsPageStyle = style({
   margin: '0 auto',
@@ -44,11 +45,10 @@ export default () => (
   <>
     <Helmet>
       <style type="text/css">
-        {`
-          body {
-            background-color: ${PALETTE.DARK_GREY};
-          }
-        `}
+        {`body {
+          background-color: ${PALETTE.DARK_GREY};
+          background-image: url("data:image/svg+xml,${buildBackgroundSvgString('#00000036')}");
+        }`}
       </style>
     </Helmet>
     <div className={ProjectsPageStyle}>

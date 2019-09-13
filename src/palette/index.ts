@@ -16,10 +16,11 @@ import {
 } from '../fonts'
 
 export const PURPLE = '#7160B7'
-export const LIGHT_GREY = '#F1F1F0'
+export const LIGHT_GREY = '#EDEDEC'
 export const SUNBURST_GREY = '#CFCFCC'
+export const MOONBURST_GREY = '#A4AFB9'
 export const MEDIUM_GREY = '#8C8C8B'
-export const DARK_GREY = '#111113'
+export const DARK_GREY = '#131316'
 export const BLACK = '#000000'
 
 export const GITHUB = '#6e5494'
