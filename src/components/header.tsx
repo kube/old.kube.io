@@ -38,7 +38,7 @@ export default () => {
   const BASE_ROT_X = Math.PI / 4
   const BASE_ROT_Y = Math.PI / 5
 
-  const revolution = useSpring(0)
+  const revolution = useSpring(0, { stiffness: 420, damping: 90, mass: 11 })
   const { scrollY } = useViewportScroll()
 
   const [rotX, setRotX] = useState(BASE_ROT_X)
