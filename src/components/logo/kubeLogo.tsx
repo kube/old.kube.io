@@ -8,7 +8,7 @@
      ## ## ## :##
       ## ## ##*/
 
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { facePath, isFaceFacingCamera } from './face'
 import * as matrix from './matrix'
 
@@ -77,25 +77,10 @@ export function Logo({
   const cameraWidth = 190
   const cameraHeight = 170
 
-  const [rotX, setRotX] = useState(0)
-  const [rotY] = useState(0)
-
-  useEffect(() => {
-    const syncRotationWithScroll = () => {
-      if (document.body.scrollTop < 300) {
-        setRotX(Math.min(document.body.scrollTop / 110, Math.PI / 4))
-      }
-    }
-    document.addEventListener('scroll', syncRotationWithScroll)
-    return () => {
-      document.removeEventListener('scroll', syncRotationWithScroll)
-    }
-  })
-
   const cubeTransformations = matrix.applyTransform([
     matrix.scale(60),
-    matrix.rotate.X(rotationX + rotX),
-    matrix.rotate.Y(rotationY - rotY),
+    matrix.rotate.X(rotationX),
+    matrix.rotate.Y(rotationY),
     matrix.translate([cameraWidth / 2, cameraHeight / 2, 0, 1])
   ])
 
