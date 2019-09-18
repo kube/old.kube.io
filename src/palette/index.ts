@@ -9,7 +9,7 @@
       ## ## ##*/
 
 import {
-  Hasklig,
+  FiraCode,
   InterUI,
   Montserrat
 } from '../fonts'
@@ -43,7 +43,7 @@ export const DarkLink = {
 export const FONTS = {
   SANS: Montserrat,
   TEXT: InterUI,
-  CODE: Hasklig
+  CODE: FiraCode
 }
 
 export const CODE = {

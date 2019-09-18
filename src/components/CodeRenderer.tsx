@@ -26,29 +26,25 @@ const CodeStyle = style({
       }
     },
     '.punctuation': {
-      fontWeight: 700,
+      fontWeight: 500,
       color: PALETTE.CODE.COMMENT
     },
     '.attr-name': {
       color: PALETTE.CODE.PINK
     },
     '.operator': {
-      fontWeight: 500,
       color: PALETTE.CODE.PURPLE
     },
     '.keyword': {
       color: PALETTE.CODE.PURPLE
     },
     '.function': {
-      fontWeight: 500,
       color: PALETTE.CODE.PINK
     },
     '.number': {
-      fontWeight: 500,
       color: PALETTE.CODE.CYAN
     },
     '.string': {
-      fontStyle: 'italic',
       color: PALETTE.CODE.CYAN
     },
     '.script': {

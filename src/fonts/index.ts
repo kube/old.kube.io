@@ -1,11 +1,10 @@
 import { loadFont } from './loadFont'
 
-export const Hasklig = loadFont({
-  name: 'Hasklig',
-  styles: ['normal', 'italic'],
-  extension: 'otf',
-  italicSuffix: 'It',
-  weights: [400,700]
+export const FiraCode = loadFont({
+  name: 'FiraCode',
+  styles: ['normal'],
+  extension: 'ttf',
+  weights: [400, 500]
 })
 
 export const Montserrat = loadFont({
