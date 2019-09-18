@@ -77,8 +77,7 @@ const TimelineStyle = style(
               '.subtitle': {
                 display: 'block',
                 marginTop: px(2),
-                fontStyle: 'italic',
-                fontFamily: Palette.FONTS.SERIF,
+                fontFamily: Palette.FONTS.TEXT,
                 fontSize: px(18)
               },
               '.description': {

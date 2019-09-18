@@ -26,7 +26,7 @@ const ProjectItemStyle = style({
   margin: 0,
   marginBottom: px(94),
   textAlign: 'justify',
-  fontWeight: 300,
+  fontWeight: 400,
   fontSize: px(16),
   lineHeight: px(21),
 
@@ -39,7 +39,7 @@ const ProjectItemStyle = style({
     },
     h3: {
       fontFamily: Palette.FONTS.SANS,
-      fontWeight: 600,
+      fontWeight: 700,
       fontSize: px(24),
       textTransform: 'uppercase',
       margin: 0,

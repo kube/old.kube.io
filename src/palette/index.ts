@@ -11,8 +11,7 @@
 import {
   Hasklig,
   InterUI,
-  Montserrat,
-  LibreBaskerville
+  Montserrat
 } from '../fonts'
 
 export const PURPLE = '#7160B7'
@@ -44,7 +43,6 @@ export const DarkLink = {
 export const FONTS = {
   SANS: Montserrat,
   TEXT: InterUI,
-  SERIF: LibreBaskerville,
   CODE: Hasklig
 }
 

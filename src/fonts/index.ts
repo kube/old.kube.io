@@ -12,19 +12,12 @@ export const Montserrat = loadFont({
   name: 'Montserrat',
   styles: ['normal'],
   extension: 'ttf',
-  weights: [300, 400, 500, 600, 700]
+  weights: [400, 500, 700]
 })
 
 export const InterUI = loadFont({
   name: 'Inter-UI',
-  styles: ['normal', 'italic'],
+  styles: ['normal'],
   extension: 'ttf',
   weights: [400, 500, 700]
-})
-
-export const LibreBaskerville = loadFont({
-  name: 'LibreBaskerville',
-  styles: ['italic'],
-  extension: 'ttf',
-  weights: [400]
 })
