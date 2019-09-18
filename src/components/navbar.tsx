@@ -57,7 +57,8 @@ const NavStyle = style(
       }
     }
   },
-  media({ type: 'print' }, { display: 'none' })
+  media({ type: 'print' }, { display: 'none' }),
+  media({ maxHeight: 400 }, { top: 0, marginTop: 0 })
 )
 
 export default () => (
