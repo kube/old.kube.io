@@ -11,7 +11,7 @@
 import React from 'react'
 import Markdown from 'react-markdown'
 import { Project } from '../data/projects'
-import { style } from 'typestyle'
+import { style, media } from 'typestyle'
 import { px, percent, rgba } from 'csx'
 
 import * as Palette from '../palette'
@@ -58,7 +58,8 @@ const ProjectItemStyle = style({
       backdropFilter: `blur(3px)`,
       '-webkit-backdrop-filter': 'blur(3px)',
       borderBottomWidth: px(2),
-      borderRadius: px(7)
+      borderRadius: px(7),
+      overflowX: 'scroll'
     },
     code: {
       fontSize: px(15),
@@ -77,7 +78,16 @@ const ProjectItemStyle = style({
       }
     }
   }
-})
+}, media(
+  { maxWidth: 400 },
+  {
+    $nest: {
+      h3: {
+        minWidth: px(265)
+      }
+    }
+  }
+))
 
 const YoutubeFrameStyle = style({
   width: percent(100),

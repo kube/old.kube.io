@@ -29,7 +29,7 @@ cssRule('a', DefaultLinkStyle)
 const PageStyle = style(
   {
     position: 'relative',
-    width: px(490),
+    maxWidth: px(490),
     minHeight: px(600),
     margin: '0 auto',
     marginBottom: px(90)

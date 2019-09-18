@@ -44,6 +44,17 @@ const CvPageStyle = style(
     }
   },
   media(
+    { maxWidth: 530 },
+    {
+      $nest: {
+        h1: {
+          fontSize: px(56),
+          lineHeight: px(51)
+        }
+      }
+    }
+  ),
+  media(
     { type: 'print' },
     {
       $nest: {
