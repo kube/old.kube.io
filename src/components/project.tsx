@@ -40,10 +40,10 @@ const ProjectItemStyle = style({
     h3: {
       fontFamily: Palette.FONTS.SANS,
       fontWeight: 700,
-      fontSize: px(25),
+      fontSize: px(27),
       textAlign: 'left',
       lineHeight: 1.1,
-      width: percent(50),
+      width: percent(54),
       textTransform: 'uppercase',
       margin: 0,
       padding: 0,
