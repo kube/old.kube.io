@@ -24,7 +24,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Monolite',
     text: paddedText`
-    |**Monolite** is a simple, *type-safe*,
+    |**Monolite** is a simple, type-safe,
     |[Structural-Sharing](https://www.youtube.com/watch?v=pLvrZPSzHxo&feature=youtu.be&t=1390)
     |library.
     |
@@ -81,11 +81,11 @@ export const PROJECTS: Project[] = [
   {
     title: 'WhenSwitch',
     text: paddedText`
-    |**WhenSwitch** adds *Ruby-like* \`case/when\` statements in JavaScript,
+    |**WhenSwitch** adds Ruby-like \`case/when\` statements in JavaScript,
     |through a single \`when\` function.
     |
-    |**Ternary expressions** become too much nested when handling too much cases,
-    |and **switch statements** are
+    |Ternary expressions become too much nested when handling too much cases,
+    |and switch statements are
     |[error-prone and block-only](https://medium.com/chrisburgin/rewriting-javascript-replacing-the-switch-statement-cfff707cf045),
     |WhenSwitch enables simple function conditional flows, as expressions:
     |
@@ -250,7 +250,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'VSCode 42 Header',
     text: paddedText`
-    |A **VSCode extension** for *42 Students*.
+    |A **VSCode extension** for 42 Students.
     |
     |42 projects need to include a 42 header in all source files.
     |This extension provides this header, with automatic refresh on save.
@@ -262,8 +262,8 @@ export const PROJECTS: Project[] = [
     text: paddedText`
     |**CUT** is for C Unit Testing.
     |
-    |It was an attempt to create a simple way to write *unit tests
-    |for C programs*.
+    |It was an attempt to create a simple way to write unit tests
+    |for C programs.
     |
     |It included **CutRun**, a CLI written in Ruby in charge of compiling
     |and running automatically the tests.
@@ -303,9 +303,9 @@ export const PROJECTS: Project[] = [
     title: 'Zappy',
     text: paddedText`
     |**Zappy** is a game composed by three programs:
-    |- A **Server**, *written in C*, emulating a map containing different resources.
+    |- A **Server**, written in C, emulating a map containing different resources.
     |
-    |- An **AI**, *written in CoffeeScript/NodeJS*, connecting to the server, and trying to evolve by taking resources which permits it to level up.
+    |- An **AI**, written in CoffeeScript/NodeJS, connecting to the server, and trying to evolve by taking resources which permits it to level up.
     |
     |  Elevation is only permitted after a group incantation. AI need to group themselves on the same cell before being able to do the incantation.
     |
@@ -313,9 +313,9 @@ export const PROJECTS: Project[] = [
     |  All they are able to do is to broadcast a sound saying that they are waiting for other AI for elevation incantation,
     |  which permits to know in which direction AI has to go to find others.
     |
-    |  Each new AI is a *fork* of its parent.
+    |  Each new AI is a fork of its parent.
     |
-    |- A **Graphic Visualizer**, *written in NodeWebkit/ThreeJS*, which shows in real-time what happens on the map.
+    |- A **Graphic Visualizer**, written in NodeWebkit/ThreeJS, which shows in real-time what happens on the map.
     |
     |All inter-process communication was achieved through TCP.
     `,
