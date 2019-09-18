@@ -68,7 +68,7 @@ export default () => {
     []
   )
   useEffect(() => {
-    setTimeout(cubeRevolution, 420)
+    setTimeout(cubeRevolution, 760)
   }, [])
 
   return (
