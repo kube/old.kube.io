@@ -12,6 +12,8 @@ import React from 'react'
 import { facePath, isFaceFacingCamera } from './face'
 import * as matrix from './matrix'
 
+const round = (x: number) => Math.round(x * 4) / 4
+
 function createFaceFaces(
   stripes: number,
   marginRatio: number,
@@ -85,7 +87,9 @@ export function Logo({
   ])
 
   const projectedCubeFaces = cubeFaces
-    .map(face => face.map(cubeTransformations))
+    .map(face =>
+      face.map(cubeTransformations).map(vector => vector.map(round))
+    )
     .filter(isFaceFacingCamera)
 
   return (

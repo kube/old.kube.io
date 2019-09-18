@@ -22,6 +22,14 @@ export const isFaceFacingCamera = (shape: Face) => {
 
 export const facePath = (face: Face) =>
   face
-    .map(([x, y], index) => [index ? 'L' : 'M', x, y].join(' '))
+    .map(([x, y], i) =>
+      i === 0
+        ? `M${x},${y}`
+        : x === face[i - 1][0]
+        ? `V${y}`
+        : y === face[i - 1][1]
+        ? `H${x}`
+        : `L${x},${y}`
+    )
     .concat('Z')
-    .join(' ')
+    .join('')
