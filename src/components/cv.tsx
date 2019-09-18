@@ -161,9 +161,9 @@ export default () => (
 
       <div className={IntroStyle}>
         <h2>
-          {cv.firstName} {cv.lastName}.
+          {cv.firstName} {cv.lastName}
         </h2>
-        <div className="job">{cv.job}.</div>
+        <div className="job">{cv.job}</div>
 
         <div className="address">
           <span className="city">{cv.address.city}</span>
