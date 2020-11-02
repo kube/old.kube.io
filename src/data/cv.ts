@@ -19,40 +19,54 @@ export const cv = {
     month: 11,
     day: 13,
     city: 'Carcassonne',
-    country: 'France'
+    country: 'France',
   },
   address: {
     number: 89,
     street: 'rue Andy Warhol',
     postalCode: '34000',
     city: 'Montpellier',
-    country: 'France'
+    country: 'France',
   },
   website: 'www.kube.io',
   mail: {
     user: 'chris',
-    domain: 'kube.io'
+    domain: 'kube.io',
   },
   phone: '0625970771',
 
-  languages: ['TypeScript', 'JavaScript', 'C', 'Ruby', 'Rust'],
-  frameworks: ['React', 'Redux', 'Electron', 'NodeJS', 'Webpack'],
-  tools: ['VS Code', 'Sketch', 'Framer X', 'Photoshop', 'Keynote'],
+  languages: ['TypeScript', 'JavaScript', 'C', 'Ruby', 'C++', 'Rust'],
+  frameworks: [
+    'React',
+    'Redux',
+    'Electron',
+    'NodeJS',
+    'GraphQL',
+    'Webpack',
+  ],
+  tools: [
+    'VS Code',
+    'Observable',
+    'Sketch',
+    'Framer',
+    'Photoshop',
+    'Keynote',
+  ],
   hobbies: ['Guitar', 'Running', 'Graphic Design'],
 
   social: [
     {
       platform: 'GitHub',
-      link: 'github.com/kube'
+      link: 'github.com/kube',
     },
     {
       platform: 'StackOverflow',
-      link: 'stackoverflow.com/users/1914206/kube'
+      link: 'stackoverflow.com/users/1914206/kube',
     },
     {
       platform: 'Twitter',
-      link: 'twitter.com/KubeKhrm'
-    }
+      link: 'twitter.com/KubeKhrm',
+    },
   ],
 
   cursus: [
@@ -61,14 +75,14 @@ export const cv = {
       title: 'HEC',
       place: 'Paris',
       subtitle: 'Digital Entrepreneur Track',
-      url: 'https://www.hec.fr/'
+      url: 'https://www.hec.fr/',
     },
     {
       date: '2013-2016',
       title: '42',
       place: 'Paris',
       subtitle: 'Software Engineering',
-      url: 'https://www.42.fr'
+      url: 'https://www.42.fr',
     },
     {
       date: '2010-2012',
@@ -76,7 +90,7 @@ export const cv = {
       place: 'Marseille',
       subtitle: 'Computer Science and Mathematics',
       url:
-        'https://www.google.fr/maps/place/Faculté+des+sciences+de+Luminy/@43.2438261,5.4335531,824a,35y,150.32h,64.64t/data=!3m1!1e3!4m5!3m4!1s0x12c9b9adb8f06c67:0x909b2f1ed0fb048b!8m2!3d43.2314739!4d5.4396339'
+        'https://www.google.fr/maps/place/Faculté+des+sciences+de+Luminy/@43.2438261,5.4335531,824a,35y,150.32h,64.64t/data=!3m1!1e3!4m5!3m4!1s0x12c9b9adb8f06c67:0x909b2f1ed0fb048b!8m2!3d43.2314739!4d5.4396339',
     },
     {
       date: '2005-2009',
@@ -84,8 +98,8 @@ export const cv = {
       place: 'Digne',
       subtitle: 'Scientific Baccalauréat — European Mention',
       url:
-        'https://www.google.fr/maps/place/Lyc%C3%A9e+Mixte+Alexandra+David+Neel/@44.0923114,6.2257472,318a,35y,23.75h,75.87t/data=!3m1!1e3!4m5!3m4!1s0x12afc9370459f165:0x74d88d1bf6fd9dfd!8m2!3d44.1002528!4d6.2333813'
-    }
+        'https://www.google.fr/maps/place/Lyc%C3%A9e+Mixte+Alexandra+David+Neel/@44.0923114,6.2257472,318a,35y,23.75h,75.87t/data=!3m1!1e3!4m5!3m4!1s0x12afc9370459f165:0x74d88d1bf6fd9dfd!8m2!3d44.1002528!4d6.2333813',
+    },
   ],
 
   work: [
@@ -94,7 +108,7 @@ export const cv = {
       title: 'kube.io',
       subtitle: 'Freelance Software Engineer',
       description: paddedText`
-      |Frontend & backend web/desktop JavaScript app development.`,
+            |Frontend & backend web/desktop JavaScript app development.`,
       stack: [
         'TypeScript',
         'React',
@@ -103,8 +117,32 @@ export const cv = {
         'GraphQL',
         'Electron',
         'Framer X',
-        'Sketch'
-      ]
+        'Sketch',
+      ],
+    },
+    {
+      date: 'Oct-Aug 2020',
+      title: 'Tinyclues',
+      place: 'Paris',
+      subtitle: 'Software Engineer',
+      url: 'https://www.tinyclues.com',
+      description: paddedText`
+      |Worked in Clapps (Client Applications) Team, on the NAF (New Action Foundation) Project.
+      |
+      |We rebuilt the main application (Action) from scratch, with new UX, and using an up-to-date stack.
+      |
+      |Clean Architecture was used with NestJS on the Backend-side, React on the Frontend, and GraphQL for the API.
+      `,
+      stack: [
+        'TypeScript',
+        'GraphQL',
+        'Apollo',
+        'React',
+        'Node.JS',
+        'NestJS',
+        'PostgreSQL',
+        'AWS Step Functions',
+      ],
     },
     {
       date: 'Apr-Aug 2019',
@@ -129,7 +167,7 @@ export const cv = {
         'Angular',
         'PostgreSQL',
         'SAML',
-      ]
+      ],
     },
     {
       date: 'Dec-Feb 2019',
@@ -143,13 +181,7 @@ export const cv = {
       |Automation of CV Parsing Data Extraction, for matching workers with companies.
       |
       |Setup Unit/E2E Testing environment, and various refactorings.`,
-      stack: [
-        'Flowtype',
-        'Node.JS',
-        'MongoDB',
-        'Parse',
-        'Jest'
-      ]
+      stack: ['Flowtype', 'Node.JS', 'MongoDB', 'Parse', 'Jest'],
     },
     {
       date: 'September 2018',
@@ -161,11 +193,7 @@ export const cv = {
       |Development of new Document Explorer Panel, which centralizes upload and view of all kind of documents in a single view.
       |
       |Setup TypeScript, Build Process Improvements.`,
-      stack: [
-        'AngularJS',
-        'TypeScript',
-        'REST'
-      ]
+      stack: ['AngularJS', 'TypeScript', 'REST'],
     },
     {
       date: 'Aug-Feb 2018',
@@ -190,8 +218,8 @@ export const cv = {
         'A/B Testing',
         'Scala',
         'Spark',
-        'Jupyter Notebooks'
-      ]
+        'Jupyter Notebooks',
+      ],
     },
     {
       date: '2017',
@@ -203,7 +231,7 @@ export const cv = {
       |
       |It featured a Test mode permitting to test knowledge on a document.
       `,
-      stack: ['TypeScript', 'React', 'Redux', 'Electron', 'DraftJS']
+      stack: ['TypeScript', 'React', 'Redux', 'Electron', 'DraftJS'],
     },
     {
       date: '2017',
@@ -230,8 +258,8 @@ export const cv = {
         'Electron',
         'Webpack',
         'Unit Testing',
-        'Jest'
-      ]
+        'Jest',
+      ],
     },
     {
       date: 'Jan-May 2016',
@@ -255,8 +283,8 @@ export const cv = {
         'Swift',
         'AES',
         'RSA',
-        'PAM Modules'
-      ]
+        'PAM Modules',
+      ],
     },
     {
       date: 'Sept-Dec 2014',
@@ -266,12 +294,7 @@ export const cv = {
       url: 'https://www.eatpopchef.com',
       description: paddedText`
       |We worked as two engineers with the then-CTO to build the entire frontend & backend of the Food-Delivery application.`,
-      stack: [
-        'JavaScript',
-        'AngularJS',
-        'NodeJS',
-        'SQL'
-      ]
+      stack: ['JavaScript', 'AngularJS', 'NodeJS', 'SQL'],
     },
     {
       date: 'Summer 2008',
@@ -282,13 +305,7 @@ export const cv = {
       description: paddedText`
       |During Summer 2008, I had the opportunity to work as a Web Designer at XSalto.
       |I worked on websites like Vallée de la Blanche, Tignes and Pra-Loup Ski Resorts.`,
-      stack: [
-        'Photoshop',
-        'Fireworks',
-        'HTML',
-        'CSS',
-        'Flash'
-      ]
-    }
-  ]
+      stack: ['Photoshop', 'Fireworks', 'HTML', 'CSS', 'Flash'],
+    },
+  ],
 }
